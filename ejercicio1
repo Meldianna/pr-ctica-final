@@ -1,0 +1,10 @@
+#lista1 equivale a la lista de legajos. lista2, a calificaciones
+def ordenar (lista1, lista2):
+    for i in range(0,len(lista2)): #i itera en calificaciones
+        for j in range(0, len(lista1)-1): #j itera en legajo
+            if lista1[j] > lista1[j+1]: 
+                lista2[i], lista2[i+1] = lista2[i+1], lista2[i] #se cambian de lugar las notas
+                lista1[j], lista1[j+1] = lista1[j+1], lista1[j] #intercambiar legajos
+                
+    print(f"Los legajos ordenados son {lista1}")
+    print(f"Las notas ordenadas son : {lista2}")
